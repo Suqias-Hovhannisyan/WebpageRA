@@ -1,30 +1,49 @@
 (() => {
-  // footer year
-  const y = document.getElementById("year");
-  if (y) y.textContent = new Date().getFullYear();
-
-  // language toggle (default EN, stores preference)
   const root = document.documentElement;
   const btn = document.getElementById("langBtn");
   const label = document.getElementById("langLabel");
 
+  const languages = ["hy", "en", "ru"]; // порядок языков
+
+  function showLang(lang) {
+    languages.forEach(l => {
+      document.querySelectorAll(`.${l}`).forEach(el => {
+        el.style.display = (l === lang) ? "" : "none";
+      });
+    });
+  }
+
   function setLang(lang) {
     root.setAttribute("data-lang", lang);
-    // Button shows the language you can switch to
-    label.textContent = (lang === "en") ? "Հայ" : "EN";
+    showLang(lang);
+
+    // кнопка показывает следующий язык
+    const currentIndex = languages.indexOf(lang);
+    const nextLang = languages[(currentIndex + 1) % languages.length];
+
+    let labelText = nextLang === "hy" ? "Հայ" : nextLang.toUpperCase();
+    label.textContent = labelText;
+
     localStorage.setItem("lang", lang);
   }
 
+  // инициализация
   const saved = localStorage.getItem("lang");
-  if (saved === "hy" || saved === "en") setLang(saved);
-  else setLang("en");
+  if (languages.includes(saved)) setLang(saved);
+  else setLang("hy"); // по умолчанию армянский
 
   if (btn) {
     btn.addEventListener("click", () => {
-      const current = root.getAttribute("data-lang") || "en";
-      setLang(current === "en" ? "hy" : "en");
+      const current = root.getAttribute("data-lang") || "hy";
+      const currentIndex = languages.indexOf(current);
+      const nextLang = languages[(currentIndex + 1) % languages.length];
+      setLang(nextLang);
     });
   }
+
+  // footer year
+  const y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
 
   // smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
