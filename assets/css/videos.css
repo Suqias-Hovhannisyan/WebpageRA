@@ -34,3 +34,8 @@
         height: 100%;
         display: block;
     }
+#film1 {
+    border: none;
+    min-width: 320px; 
+    min-height:315px;
+}
