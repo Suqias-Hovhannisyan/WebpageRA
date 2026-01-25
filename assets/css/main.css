@@ -10,7 +10,7 @@
   --accent2:#b7ffcf;
   --radius: 18px;
   --shadow: 0 14px 42px rgba(0,0,0,.35);
-  --max: 1100px;
+  --max: 1250px;
 }
 
 *{ box-sizing: border-box; }
@@ -44,7 +44,7 @@ a{ color: var(--accent); text-decoration: none; }
     }
 
 .container{
-  width: min(var(--max), calc(100% - 48px));
+  width: min(var(--max), calc(100% - 10px));
   margin: 0 auto;
 }
 
