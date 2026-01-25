@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Robert Abajyan — Memorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- общий CSS -->
+    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/videos.css">
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a href="index.html">
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <div class="brand-text">
+                        <div class="brand-title">
+                            <span class="en">Robert Abajyan</span>
+                            <span class="hy">Ռոբերտ Աբաջյան</span>
+                            <span class="ru">Роберт Абаджян</span>
+                        </div>
+                        <div class="brand-subtitle">
+                            <span class="en">Memorial Page</span>
+                            <span class="hy">Հուշահամալիր էջ</span>
+                            <span class="ru">Страница памяти</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <nav class="nav" aria-label="Primary navigation">
+                <a href="index.html#about"><span class="en">About</span><span class="hy">Կենսագրություն</span><span class="ru">Биография</span></a>
+                <a href="index.html#timeline"><span class="en">Timeline</span><span class="hy">Ժամանակագիծ</span><span class="ru">Хронология</span></a>
+                <a href="index.html#legacy"><span class="en">Legacy</span><span class="hy">Ժառանգություն</span><span class="ru">Наследие</span></a>
+                <a href="gallery.html"><span class="en">Gallery</span><span class="hy">Պատկերասրահ</span><span class="ru">Галерея</span></a>
+                <a href="videos.html"><span class="en">Videos</span><span class="hy">Տեսանյութեր</span><span class="ru">Видео</span></a>
+
+                <button class="btn btn-lang" id="langBtn" type="button" aria-label="Toggle language">
+                    🌐 <span id="langLabel">Հայ</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER (подгружается как и в других страницах) -->
+    <div id="site-header"></div>
+
+    <main>
+        <section class="section alt" id="videos">
+            <div class="container">
+                <div class="section-head">
+                    <h2>
+                        <span class="en">Films</span>
+                        <span class="hy">Ֆիլմեր</span>
+                        <span class="ru">Фильмы</span>
+                    </h2>
+                </div>
+
+                <div class="video-grid">
+
+                    <figure class="v-card">
+                        <div class="v-media">
+                            <video controls preload="metadata">
+                                <source src="assets/videos/Robert Abajyan erkar film.mp4" type="video/mp4">
+                            </video>    
+                        </div>
+                    </figure>
+
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-head">
+                    <h2>
+                        <span class="en">Videos</span>
+                        <span class="hy">Տեսանյութեր</span>
+                        <span class="ru">Видео</span>
+                    </h2>
+                </div>
+
+                <div class="video-grid">
+
+                    <figure class="v-card">
+                        <div class="v-media">
+                            <video controls preload="metadata">
+                                <source src="assets/videos/15 - 21.05. - Sargis Khachaturyan feat Lena Ghazaryan - Արցախի հերոս - Герой Арцаха - Hero of Artsakh.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </figure>
+                    <figure class="v-card">
+                        <div class="v-media">
+                            <video controls preload="metadata">
+                                <source src="assets/videos/Video_2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="muted">© <span id="year"></span> <span class="en">Memorial page</span><span class="hy">Հուշահամալիր էջ</span><span class="ru">Страница памяти</span></div>
+            
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
